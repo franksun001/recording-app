@@ -63,19 +63,15 @@
         "resizable": true,
         "size": {
           "width": 250,
-          "height": 340
+          "height": 100
         },
         "min_size": {
           "width": 250,
-          "height": 340
-        },
-        "max_size": {
-          "width": 400,
-          "height": 360
+          "height": 100
         },
         "start_position": {
-          "top": 500,
-          "left": 30
+          "left": 0,
+          "top": 9999
         }
       }
     },
