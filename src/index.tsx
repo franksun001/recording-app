@@ -8,6 +8,7 @@ import { initReactI18next } from "react-i18next";
 import { Provider } from "react-redux";
 import { App } from "./app/App";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
 overwolf.settings.getCurrentOverwolfLanguage((result) => {
   i18next.use(initReactI18next).init(

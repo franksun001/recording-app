@@ -51,9 +51,13 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "@types/remote-redux-devtools": "^0.5.4",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
     "remote-redux-devtools": "^0.5.16",
-    "remotedev-server": "^0.3.1"
+    "remotedev-server": "^0.3.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   },
   "homepage": "."
 }

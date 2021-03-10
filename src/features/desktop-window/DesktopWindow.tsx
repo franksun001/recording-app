@@ -3,7 +3,6 @@ import { DesktopHeader } from "./DesktopHeader";
 import { Title } from "components/Title";
 import style from "./DesktopWindow.module.css";
 import { useTranslation } from "react-i18next";
-
 const DesktopWindow: FC = () => {
   const { t } = useTranslation();
 
