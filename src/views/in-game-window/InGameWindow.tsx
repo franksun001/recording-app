@@ -2,7 +2,7 @@ import React, { FC, useEffect } from "react";
 // import { Title } from "components/Title";
 import { RootReducer } from "app/rootReducer";
 import { useSelector } from "react-redux";
-import "./InGameWindow.css";
+import "./InGameWindow.less";
 
 const InGameWindow: FC = () => {
   const { event, info } = useSelector((state: RootReducer) => state.background);
@@ -42,7 +42,7 @@ const InGameWindow: FC = () => {
   }
 
   return (
-    <div>
+    <div className="in-game-root pt-3 pr-5 pb-2 pl-2 rounded-tr-xl">
       <div className="btn-wrap">
         <button id="start-btn" onClick={start}>Start</button>
         <button id="stop-btn" onClick={stop}>Stop</button>

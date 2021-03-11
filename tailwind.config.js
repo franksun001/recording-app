@@ -15,10 +15,12 @@ module.exports = {
         r00: "#F14343",
         r10: "#BE3434",
       },
-      opacity: {
-      },
+      opacity: {},
       letterSpacing: {
         0.01: "0.01em",
+      },
+      zIndex: {
+        "-1": -1,
       },
     },
   },

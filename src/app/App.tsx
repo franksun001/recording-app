@@ -13,7 +13,7 @@ const CurrentPage = ({ page }: { page: string }): JSX.Element => {
     case BACKGROUND:
       return <BackgroundWindow />;
     case DESKTOP:
-      return <DesktopWindow />;
+      return <InGameWindow />;
     case INGAME:
       return <InGameWindow />;
     default:

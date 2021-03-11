@@ -33,7 +33,7 @@ const Login: FC = () => {
 
   const loginDisabled = useMemo(() => !username.length || !password.length, [username, password]);
   return (
-    <div className="login-root flex flex-col items-center relative h-screen">
+    <div className="login-root flex flex-col items-center relative z-0 h-screen">
       <img src={IconLogo} alt="logo" className="mt-8 w-9 h-8" />
       <div className="login-container">
         <div className="title font-semibold">Login</div>
@@ -83,9 +83,9 @@ const Login: FC = () => {
         </div>
       </div>
 
-      <img src={LeftLogo} alt="Polygon" className="absolute top-0 left-0" />
-      <img src={TopPolygon} alt="Polygon" className="absolute top-0 right-5" />
-      <img src={BottomPolygon} alt="Polygon" className="absolute bottom-0 right-0" />
+      <img src={LeftLogo} alt="Polygon" className="absolute top-0 left-0 -z-1" />
+      <img src={TopPolygon} alt="Polygon" className="absolute top-0 right-5 -z-1" />
+      <img src={BottomPolygon} alt="Polygon" className="absolute bottom-0 right-0 -z-1" />
     </div>
   );
 };

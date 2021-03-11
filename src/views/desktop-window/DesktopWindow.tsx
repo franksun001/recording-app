@@ -1,11 +1,11 @@
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import DesktopHeader from "./DesktopHeader";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { desktopRouters } from "../../utils/routers";
 
 const DesktopWindow: FC = () => {
   return (
-    <Fragment>
+    <div className="bg-d00">
       <DesktopHeader />
       <Router>
         <Switch>
@@ -33,7 +33,7 @@ const DesktopWindow: FC = () => {
         </footer>
       </div> */}
       </Router>
-    </Fragment>
+    </div>
   );
 };
 
