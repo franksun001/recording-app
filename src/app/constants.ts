@@ -23,10 +23,3 @@ export const REQUIRED_FEATURES = [
   "counters"
 ];
 export const REGISTER_RETRY_TIMEOUT = 10000;
-export const WINDOW_NAMES = {
-  BACKGROUND: "background",
-  SETTINGS: "settings",
-  DEVELOPMENT: "development",
-  INGAME: "in_game",
-  DESKTOP: "desktop"
-};

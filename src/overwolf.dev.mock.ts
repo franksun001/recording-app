@@ -1,5 +1,5 @@
 import rootReducer from "app/rootReducer";
-import { WINDOW_NAMES } from "app/constants";
+import { WINDOW_NAMES } from "./utils/enum";
 
 import { configureStore } from "@reduxjs/toolkit";
 import devToolsEnhancer from "remote-redux-devtools";
@@ -12,9 +12,9 @@ const reduxStore = configureStore({
       realtime: true,
       name: "Overwolf ",
       hostname: "localhost",
-      port: 8000
-    })
-  ]
+      port: 8000,
+    }),
+  ],
 });
 class MockGepMethods {
   static addListener(callback: (payload?: any) => void): void {
@@ -60,21 +60,19 @@ const overwolfMock: typeof overwolf = {
     requestPermissions: (callback: () => void) => {
       callback();
     },
-    stopRequesting: () => {}
+    stopRequesting: () => {},
   },
   //@ts-ignore
   settings: {
-    getCurrentOverwolfLanguage: (
-      callback: (result: overwolf.settings.IInitI18N) => void
-    ) => {
+    getCurrentOverwolfLanguage: (callback: (result: overwolf.settings.IInitI18N) => void) => {
       callback({ status: "success", language: "en" });
-    }
+    },
   },
   //@ts-ignore
   utils: {
     openUrlInDefaultBrowser: (url: string) => {
       window.open(url);
-    }
+    },
   },
   //@ts-ignore
   windows: {
@@ -83,10 +81,7 @@ const overwolfMock: typeof overwolf = {
     },
     //@ts-ignore
     getMainWindow: () => ({ reduxStore }),
-    obtainDeclaredWindow(
-      windowName: string,
-      callback: (response: any) => void
-    ): void {
+    obtainDeclaredWindow(windowName: string, callback: (response: any) => void): void {
       callback({ window: { name: windowName }, success: true });
     },
     restore(windowId: string, callback: (result: any) => void): void {
@@ -100,7 +95,7 @@ const overwolfMock: typeof overwolf = {
     },
     minimize(windowId: string, callback: (result: any) => void): void {
       console.info("Mock minimize");
-    }
+    },
   },
   //@ts-ignore
   games: {
@@ -114,7 +109,7 @@ const overwolfMock: typeof overwolf = {
       },
       getInfo: (callback: (payload?: any) => void) => {
         callback();
-      }
+      },
     },
     onGameInfoUpdated: MockGepMethods,
     inputTracking: {
@@ -132,18 +127,18 @@ const overwolfMock: typeof overwolf = {
         callback();
       },
       getMatchActivityInformation: (
-        callback: (activity: overwolf.games.IMatchActivity) => void
+        callback: (activity: overwolf.games.IMatchActivity) => void,
       ) => {
         callback({ activity: {}, status: "DEV_BROWSER" });
       },
       pauseEyeTracking: () => {},
-      resumeEyeTracking: () => {}
-    }
-  }
+      resumeEyeTracking: () => {},
+    },
+  },
 };
 
 export default process.env.NODE_ENV !== "production" &&
   Object.defineProperty(window, "overwolf", {
     writable: true,
-    value: overwolfMock
+    value: overwolfMock,
   });

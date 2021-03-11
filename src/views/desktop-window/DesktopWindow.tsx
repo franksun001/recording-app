@@ -1,20 +1,19 @@
-import React, { FC } from "react";
-// import { DesktopHeader } from "./DesktopHeader";
-// import { Title } from "components/Title";
-// import style from "./DesktopWindow.module.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { FC, Fragment } from "react";
+import DesktopHeader from "./DesktopHeader";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { desktopRouters } from "../../utils/routers";
 
 const DesktopWindow: FC = () => {
-
   return (
-    <Router>
-      <Switch>
-        {desktopRouters.map((_) => (
-          <Route key={_.path} {..._} />
-        ))}
-      </Switch>
-      {/* <DesktopHeader />
+    <Fragment>
+      <DesktopHeader />
+      <Router>
+        <Switch>
+          {desktopRouters.map((_) => (
+            <Route key={_.path} {..._} />
+          ))}
+        </Switch>
+        {/* <DesktopHeader />
       <div className={style.container}>
         <header className={style.header}>
           <Title color="green">
@@ -33,7 +32,8 @@ const DesktopWindow: FC = () => {
           <Title color="white">{t("components.desktop.footer")}</Title>
         </footer>
       </div> */}
-    </Router>
+      </Router>
+    </Fragment>
   );
 };
 

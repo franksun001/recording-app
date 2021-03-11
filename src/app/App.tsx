@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import InGameWindow from "../views/in-game-window/InGameWindow";
 import DesktopWindow from "../views/desktop-window/DesktopWindow";
 import BackgroundWindow from "../views/background-window/BackgroundWindow";
-import { WINDOW_NAMES } from "./constants";
+import { WINDOW_NAMES } from "../utils/enum";
 
 import "./App.css";
 
@@ -34,9 +34,11 @@ export const App: FC = (): JSX.Element => {
   useEffect(() => {
     async function preLoad() {
       if (process.env.NODE_ENV === "development") {
+        console.log("Browser", process.env.NODE_ENV);
         setPage(DESKTOP);
       } else {
         const currentWindow = await getCurrentWindow();
+        console.log("Overwolf", currentWindow);
         setPage(currentWindow);
       }
     }

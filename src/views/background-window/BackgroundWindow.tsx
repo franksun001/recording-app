@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { WINDOW_NAMES } from "app/constants";
+import { WINDOW_NAMES } from "../../utils/enum";
 import { setEvent, setInfo } from "./background-slice";
 import {
   useWindow,
