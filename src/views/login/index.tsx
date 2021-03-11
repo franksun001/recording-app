@@ -1,5 +1,4 @@
 import React, { FC, useState, useMemo } from "react";
-// import PropTypes from "prop-types";
 
 import Input from "../../components/component_input";
 import Button from "../../components/component_button";
@@ -55,7 +54,7 @@ const Login: FC = () => {
           <Button type={ButtonType.PRIMARY} disabled={loginDisabled} onClick={login}>
             Login
           </Button>
-          <div className="text-sm text-l40">
+          <div className="text-sm text-g00">
             No account?
             <a className="ml-1.5 font-semibold text-white" href="/">
               Sign Up
@@ -64,7 +63,7 @@ const Login: FC = () => {
         </div>
         <div className="flex items-center mt-10">
           <div className="dividing-line flex-1"></div>
-          <div className="mx-5 font-medium text-xs text-l40">or login with</div>
+          <div className="mx-5 font-medium text-xs text-g00">or login with</div>
           <div className="dividing-line flex-1"></div>
         </div>
         <div className="bottom-btns flex items-center justify-between mt-10">

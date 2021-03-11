@@ -32,7 +32,7 @@ const Input: FC<Props> = (props) => {
   return (
     <div className={classnames("input-root", className)}>
       {label && (
-        <div className="label flex justify-between items-center font-medium text-xs text-l40">
+        <div className="label flex justify-between items-center font-medium text-xs text-g00">
           {label}
           {isPw && (
             <a className="text-r00" href="/">

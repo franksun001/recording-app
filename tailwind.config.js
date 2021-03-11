@@ -11,9 +11,9 @@ module.exports = {
       colors: {
         d00: "#191A1F",
         d10: "#242630",
-        l40: "#798694",
         r00: "#F14343",
         r10: "#BE3434",
+        g00: "#798694",
       },
       opacity: {},
       letterSpacing: {
