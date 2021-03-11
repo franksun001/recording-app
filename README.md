@@ -101,7 +101,7 @@ Folder-by-type only works on small-scale projects. Folder-by-feature is superior
 |    |-------rootReducer.ts
 |    |-------store.ts
 |    |--- components/*/**.tsx
-|    |--- features/*/**.tsx
+|    |--- views/*/**.tsx
 |    |--- typings/*/**.d.ts
 |    |--- locales/
 |    |-----------de/**/*.json

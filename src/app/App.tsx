@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
-import InGameWindow from "features/in-game-window/InGameWindow";
-import DesktopWindow from "features/desktop-window/DesktopWindow";
-import BackgroundWindow from "features/background-window/BackgroundWindow";
+import InGameWindow from "../views/in-game-window/InGameWindow";
+import DesktopWindow from "../views/desktop-window/DesktopWindow";
+import BackgroundWindow from "../views/background-window/BackgroundWindow";
 import { WINDOW_NAMES } from "./constants";
 
 import "./App.css";

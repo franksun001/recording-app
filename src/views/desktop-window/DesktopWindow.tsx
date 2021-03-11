@@ -1,14 +1,20 @@
 import React, { FC } from "react";
-import { DesktopHeader } from "./DesktopHeader";
-import { Title } from "components/Title";
-import style from "./DesktopWindow.module.css";
-import { useTranslation } from "react-i18next";
+// import { DesktopHeader } from "./DesktopHeader";
+// import { Title } from "components/Title";
+// import style from "./DesktopWindow.module.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { desktopRouters } from "../../utils/routers";
+
 const DesktopWindow: FC = () => {
-  const { t } = useTranslation();
 
   return (
-    <>
-      <DesktopHeader />
+    <Router>
+      <Switch>
+        {desktopRouters.map((_) => (
+          <Route key={_.path} {..._} />
+        ))}
+      </Switch>
+      {/* <DesktopHeader />
       <div className={style.container}>
         <header className={style.header}>
           <Title color="green">
@@ -26,8 +32,8 @@ const DesktopWindow: FC = () => {
         <footer className={style.footer}>
           <Title color="white">{t("components.desktop.footer")}</Title>
         </footer>
-      </div>
-    </>
+      </div> */}
+    </Router>
   );
 };
 

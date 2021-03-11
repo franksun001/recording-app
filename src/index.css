@@ -1,3 +1,53 @@
 @tailwind base;
+@font-face {
+  font-family: "Graphik Web";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Graphik Web"),
+    url("https://static.metafy.gg/fonts/Graphik-Regular-Web.woff2") format("woff2"),
+    url("https://static.metafy.gg/fonts/Graphik-Regular-Web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Graphik Web";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Graphik Web"),
+    url("https://static.metafy.gg/fonts/Graphik-Medium-Web.woff2") format("woff2"),
+    url("https://static.metafy.gg/fonts/Graphik-Medium-Web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Graphik Web";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Graphik Web"),
+    url("https://static.metafy.gg/fonts/Graphik-Semibold-Web.woff2") format("woff2"),
+    url("https://static.metafy.gg/fonts/Graphik-Semibold-Web.woff") format("woff");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Graphik Web";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Graphik Web"),
+    url("https://static.metafy.gg/fonts/Graphik-RegularItalic-Web.woff2") format("woff2"),
+    url("https://static.metafy.gg/fonts/Graphik-RegularItalic-Web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Graphik Web";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Graphik Web"),
+    url("https://static.metafy.gg/fonts/Graphik-MediumItalic-Web.woff2") format("woff2"),
+    url("https://static.metafy.gg/fonts/Graphik-MediumItalic-Web.woff") format("woff");
+}
 @tailwind components;
 @tailwind utilities;

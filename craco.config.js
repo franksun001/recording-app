@@ -6,9 +6,6 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: {
-              "font-size-base": "16px",
-            },
             javascriptEnabled: true,
           },
         },
